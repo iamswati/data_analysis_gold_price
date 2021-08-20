@@ -1,18 +1,25 @@
-### View on website [Link](https://iamswati.github.io/data_analysis_gold_price/)
+<div class = "container">
 # Glod Price Prediction Using Machine Learning 
 
 This Notebook deals with prediction of gold prices. The data contains features regarding the Gold Price Data.
 
+</div>
+
+
+### View on website [Link](https://iamswati.github.io/data_analysis_gold_price/)
+
+  
 ## Objectives
 * The main goal of this note book is to build the machine learning system that can predict gold prices based on several other stock prices.
 * Obtain data insights using pandas.
+
 
 ## ABOUT THE DATA
 * **Data Overview:** This data file is a Comma separated value(CSV) file format with 2290 rows and 7 columns. It contains 5 columns which are numerical in datatype and one column in Date format. Clearly the data shows value of the variables SPX, GLD, USO, SLV, EUR/USD against the dates in the date column.
 * Data Sourse: [Link](https://www.kaggle.com/altruistdelhite04/gold-price-data)
 * Data type available: .csv
 
-```
+```python
 # Import required libraries
 import pandas as pd                                          #Load data & perform basic operations
 import numpy as np                                           #Numpy Arrays
@@ -38,7 +45,6 @@ from sklearn import metrics                                  #Useful for finding
 
 ![HeatMap](https://user-images.githubusercontent.com/67102886/129918593-2a5de4b9-b6fb-44b1-8b11-26177e6af892.png)
 
-
 * Gold (GLD) and silver (SLV) are highly corelated to each other -> 0.9
 * Gold (GLD) and Standard and Poor's 500 (SPX) are zero correlation -> 0.0
 * Rest features expect gold (GLD) are negative correlated with respect to gold (GLD) -> -0.0 & -0.2
@@ -49,3 +55,27 @@ from sklearn import metrics                                  #Useful for finding
 ![image](https://user-images.githubusercontent.com/67102886/129919722-eaa87a93-4d1d-43a5-bf25-363c014d8bec.png)
 
 
+### Splitting the Features and Target
+* Traget - GLD (gold) price stock
+* Features - Other stocks
+
+```python
+# axis = 1 (Columns)
+# axis = 0 (Rows)
+X = gold_price.drop(["Date", "GLD"], axis = 1)
+Y = gold_price["GLD"]
+```
+
+
+### Model Training: Random Forest Regressor
+
+```python
+# Training the model
+# .fit function used to fit our data to this regressive model
+regressor.fit(X_train, Y_train)
+```
+
+
+### Compare the Actual Values & Predicted Values in a Plot
+
+![image](https://user-images.githubusercontent.com/67102886/130235602-f54f3a82-2018-4fd7-a830-a24cb0ed0130.png)
