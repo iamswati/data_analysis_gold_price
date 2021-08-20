@@ -1,16 +1,18 @@
-### View on website [Link](https://iamswati.github.io/data_analysis_gold_price/)
+### View on the website [Link](https://iamswati.github.io/data_analysis_gold_price/)
 
-# Glod Price Prediction Using Machine Learning 
+# Gold Price Prediction Using Machine Learning 
 This Notebook deals with prediction of gold prices. The data contains features regarding the Gold Price Data.
 
   
 ## Objectives
-* The main goal of this note book is to build the machine learning system that can predict gold prices based on several other stock prices.
+* The main goal of this notebook is to build a machine learning system that can predict gold prices based on several other stock prices.
 * Obtain data insights using pandas.
+* Find the correlation of the other features with GLD (gold) price.
+* Predict the GLD (gold) price by splitting the data & evaluate the model.
 
 
 ## ABOUT THE DATA
-* **Data Overview:** This data file is a Comma separated value(CSV) file format with 2290 rows and 7 columns. It contains 5 columns which are numerical in datatype and one column in Date format. Clearly the data shows value of the variables SPX, GLD, USO, SLV, EUR/USD against the dates in the date column.
+* **Data Overview:** This data file is a comma-separated value(CSV) file format with 2290 rows and 7 columns. It contains 5 columns which are numerical in datatype and one column in Date format. Clearly, the data shows the value of the variables SPX, GLD, USO, SLV, EUR/USD against the dates in the date column.
 * Data Sourse: [Link](https://www.kaggle.com/altruistdelhite04/gold-price-data)
 * Data type available: .csv
 
@@ -69,6 +71,7 @@ Y = gold_price["GLD"]
 # .fit function used to fit our data to this regressive model
 regressor.fit(X_train, Y_train)
 ```
+**R scored error: 0.98**
 
 
 ## Compare the Actual Values & Predicted Values in a Plot
