@@ -1,12 +1,7 @@
-<div class = "container">
-# Glod Price Prediction Using Machine Learning 
-
-This Notebook deals with prediction of gold prices. The data contains features regarding the Gold Price Data.
-
-</div>
-
-
 ### View on website [Link](https://iamswati.github.io/data_analysis_gold_price/)
+
+# Glod Price Prediction Using Machine Learning 
+This Notebook deals with prediction of gold prices. The data contains features regarding the Gold Price Data.
 
   
 ## Objectives
@@ -41,7 +36,7 @@ from sklearn import metrics                                  #Useful for finding
 * **EUR/USD -** The Currency Pair EUR/USD is the shortened term for the euro against U.S. dollar pair, or cross for the currencies of the European Union (EU) and the United States (USD). The value of the EUR/USD pair is quoted as 1 euro per x U.S. dollars. For example, if the pair is trading at 1.50, it means it takes 1.5 U.S. dollars to buy 1 euro.
 
 
-### Correlation
+## Correlation
 
 ![HeatMap](https://user-images.githubusercontent.com/67102886/129918593-2a5de4b9-b6fb-44b1-8b11-26177e6af892.png)
 
@@ -50,12 +45,12 @@ from sklearn import metrics                                  #Useful for finding
 * Rest features expect gold (GLD) are negative correlated with respect to gold (GLD) -> -0.0 & -0.2
 
 
-### Checking the distribution of GLD price
+## Checking the distribution of GLD price
 
-![image](https://user-images.githubusercontent.com/67102886/129919722-eaa87a93-4d1d-43a5-bf25-363c014d8bec.png)
+![Distribution Plot Of GLD Price](https://user-images.githubusercontent.com/67102886/129919722-eaa87a93-4d1d-43a5-bf25-363c014d8bec.png)
 
 
-### Splitting the Features and Target
+## Splitting the Features and Target
 * Traget - GLD (gold) price stock
 * Features - Other stocks
 
@@ -67,7 +62,7 @@ Y = gold_price["GLD"]
 ```
 
 
-### Model Training: Random Forest Regressor
+## Model Training: Random Forest Regressor
 
 ```python
 # Training the model
@@ -76,6 +71,6 @@ regressor.fit(X_train, Y_train)
 ```
 
 
-### Compare the Actual Values & Predicted Values in a Plot
+## Compare the Actual Values & Predicted Values in a Plot
 
-![image](https://user-images.githubusercontent.com/67102886/130235602-f54f3a82-2018-4fd7-a830-a24cb0ed0130.png)
+![Actaul Values vs Predicted Values](https://user-images.githubusercontent.com/67102886/130235602-f54f3a82-2018-4fd7-a830-a24cb0ed0130.png)
